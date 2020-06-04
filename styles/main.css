@@ -19,8 +19,8 @@ a{
 }
 h1, h2, h3, h4, h5, h6{
     color: var(--title-color);
-    font-family: 'Ubuntu', sans-serif;
-    margin-bottom: 32px;
+    font-family: 'Ubuntu', sans-serif;/* 
+    margin-bottom: 32px; */
 }
 /*  display:inline ocupa apenas o espaço dele 
     display:block ocupa a linha toda */

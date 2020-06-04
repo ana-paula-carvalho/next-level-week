@@ -36,6 +36,9 @@ form h1{
 form fieldset{
     margin-top: 64px;
     border: 0;
+    display: flex;
+    
+    flex: 1;
 }
 form legend{
     margin-bottom: 40px;
@@ -44,10 +47,10 @@ form legend h2{
     font-size: 24px;
 }
 form .field{
-    flex: 1;
     display: flex;
+    flex: 1;
     flex-direction: column;
-    margin-bottom: 24px;
+    margin-bottom: 24px; 
 }
 form .field-group{
     display: flex;
@@ -87,4 +90,39 @@ form button{
 
 form button:hover{
     background-color: #2fb86e;
+}
+.items-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;/* fração em coluna */
+    gap: 16px;
+}
+.items-grid li{
+    background-color: #f5f5f5;
+    list-style: none;
+    border: 2px solid  #f5f5f5;
+    border-radius: 8px;
+    padding: 32px 24px 16px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    cursor: pointer;/*coloca a maozinha de lik quando a pessoa passar o mouse por cima*/
+}
+.items-grid li span{
+    margin-top: 12px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: var(--title-color);
+}
+.items-grid li.selected{/*quando não tem espaço=> Procure o li q tenha classe="selected quando tem espaço=> Procure dentro do li um elemento com a classe selected"*/
+    background-color: #e1faec;
+    border: 2px solid #34cb79;
+
+}
+.items-grid li img,
+.items-grid li span{
+    pointer-events: none;/*para tirar o cursor:pointer da imagem e do texto*/
 }
